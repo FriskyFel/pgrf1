@@ -4,9 +4,13 @@ import view.Panel;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 public class Controller2D {
     private final Panel panel;
+    private enum VERSION {LINE, POLYGON};
+    private ArrayList<Line> lines = new ArrayList<>();
+    private Polygon polygon = new Polygon();
 
     public Controller2D(Panel panel) {
         this.panel = panel;
