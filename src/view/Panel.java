@@ -10,7 +10,6 @@ public class Panel extends JPanel {
 
     public Panel(int width, int height) {
         setPreferredSize(new Dimension(width, height));
-
         image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
     }
 
@@ -18,6 +17,8 @@ public class Panel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(image, 0, 0, null);
+        g.setColor(Color.RED);
+
     }
 
     public BufferedImage getRaster() {
@@ -32,5 +33,12 @@ public class Panel extends JPanel {
     public void paintLine (int x1, int y1, int x2, int y2, int color) {
         //for ()
         //this.repaint();
+    }
+
+    public void clearCanvas() {
+        Graphics g = image.getGraphics();
+        g.setColor(Color.BLACK);
+        g.fillRect(0, 0, this.getWidth(), this.getHeight());
+        this.repaint();
     }
 }

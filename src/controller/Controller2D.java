@@ -3,8 +3,7 @@ package controller;
 import view.Panel;
 
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 
 public class Controller2D {
     private final Panel panel;
@@ -26,6 +25,16 @@ public class Controller2D {
             @Override
             public void mouseDragged(MouseEvent e) {
                 panel.paintPixel(e.getX(), e.getY(), 0xFFFF0000 );
+            }
+        });
+
+        panel.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_C) {
+                    panel.clearCanvas();
+                    System.out.println("it worked?");
+                }
             }
         });
     }
