@@ -8,16 +8,16 @@ public class Line {
          p2 = new Point2D(x2, y2);
     }
 
-    Line (Point2D point2D1, Point2D point2D2) {
+    public Line(Point2D point2D1, Point2D point2D2) {
         this.p1 = point2D1;
         this.p2 = point2D1;
     }
 
-    public Point2D getVertex1 (){
+    public Point2D getP1 (){
         return p1;
     }
 
-    public Point2D getVertex2 (){
+    public Point2D getP2 (){
         return p2;
     }
 }
