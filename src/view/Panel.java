@@ -1,6 +1,6 @@
 package view;
 
-import model.Vertex;
+import model.Point2D;
 
 import javax.swing.*;
 import java.awt.*;
@@ -36,10 +36,10 @@ public class Panel extends JPanel {
         this.repaint();
     }
 
-    public void paintLine (Vertex vertex1, Vertex vertex2) {
+    public void paintLine (Point2D point2D1, Point2D point2D2) {
         //for ()
 
-        g.drawLine(vertex1.getX(), vertex1.getY(), vertex2.getX(), vertex2.getY());
+        g.drawLine(point2D1.getX(), point2D1.getY(), point2D2.getX(), point2D2.getY());
         this.repaint();
     }
 
@@ -48,7 +48,7 @@ public class Panel extends JPanel {
         g.fillRect(0, 0, this.getWidth(), this.getHeight());
         this.repaint();
         g.setColor(Color.RED);
-        paintLine(new Vertex(10, 10), new Vertex(100, 100));
+        paintLine(new Point2D(10, 10), new Point2D(100, 100));
     }
 
     public void setVersionInfo(String version) {

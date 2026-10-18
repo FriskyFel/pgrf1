@@ -1,18 +1,23 @@
 package model;
 
 public class Line {
-    private Vertex vertex1, vertex2;
+    private final Point2D p1, p2;
 
     Line (int x1, int y1, int x2, int y2) {
-         vertex1 = new Vertex(x1, y1);
-         vertex2 = new Vertex(x2, y2);
+         p1 = new Point2D(x1, y1);
+         p2 = new Point2D(x2, y2);
     }
 
-    public Vertex getVertex1 (){
-        return vertex1;
+    Line (Point2D point2D1, Point2D point2D2) {
+        this.p1 = point2D1;
+        this.p2 = point2D1;
     }
 
-    public Vertex getVertex2 (){
-        return vertex2;
+    public Point2D getVertex1 (){
+        return p1;
+    }
+
+    public Point2D getVertex2 (){
+        return p2;
     }
 }

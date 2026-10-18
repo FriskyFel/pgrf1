@@ -1,14 +1,14 @@
 package model;
 
-public class Vertex {
+public class Point2D {
     private int x, y;
 
-    public Vertex(int x, int y) {
+    public Point2D(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public Vertex(){
+    public Point2D(){
     }
 
     public int getX() {

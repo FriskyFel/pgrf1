@@ -1,7 +1,7 @@
 package controller;
 
 import model.Line;
-import model.Vertex;
+import model.Point2D;
 import view.Panel;
 
 import java.awt.*;
@@ -14,7 +14,7 @@ public class Controller2D {
     private VERSION version = VERSION.LINE;
     private ArrayList<Line> lines = new ArrayList<>();
     private Polygon polygon = new Polygon();
-    private Vertex dragVertex = new Vertex();
+    private Point2D dragPoint2D = new Point2D();
 
     public Controller2D(Panel panel) {
         this.panel = panel;
@@ -32,8 +32,8 @@ public class Controller2D {
             @Override
             public void mousePressed(MouseEvent e) {
                 if (e.getButton() == MouseEvent.BUTTON1) {
-                    dragVertex.setX(e.getX());
-                    dragVertex.setY(e.getY());
+                    dragPoint2D.setX(e.getX());
+                    dragPoint2D.setY(e.getY());
                 }
             }
         });
