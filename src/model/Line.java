@@ -10,7 +10,7 @@ public class Line {
 
     public Line(Point2D point2D1, Point2D point2D2) {
         this.p1 = point2D1;
-        this.p2 = point2D1;
+        this.p2 = point2D2;
     }
 
     public Point2D getP1 (){

@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class RasterBufferedImage implements Raster {
 
     private final BufferedImage img;
-    private int clearColor = 0x000000; // black
+    private int clearColor = 0x000000;
 
     public RasterBufferedImage(int width, int height) {
         img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);

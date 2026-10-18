@@ -13,7 +13,7 @@ public abstract class LineRasterizer {
         this.raster = raster;
     }
 
-    /** Draws a line from [x1, y1] to [x2, y2]. */
+
     public abstract void rasterize(int x1, int y1, int x2, int y2, int color);
 
     public void rasterize(Point2D p1, Point2D p2, int color) {
